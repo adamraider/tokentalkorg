@@ -6,12 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="./css/application.css">
 
 </head>
 <body>
-  <div class="container">
-    <h1>TokenTalk.org</h1>
+  <div class="global-nav">
+    <div class="container">
+      <div class="global-nav__logo"><a href="/">Token<strong>Talk</strong>.org</a></div>
+      <div class="global-nav__search">
+        <input type="text" placeholder="search...">
+        <div class="btn-search">
+          <i class="material-icons">search</i>
+        </div>
+      </div>
+      <ul class="global-nav__menu">
+        <li><a href="/">home</a></li>
+        <li><a href="#">forum</a></li>
+        <li><a href="#">discover</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+      <div class="global-nav__user">
+        <div class="user__icon">
+          <i class="material-icons">account_circle</i>
+        </div>
+        <span class="user__name">Adam</span>
+        <span class="user__notifications">12</span>
+      </div>
+    </div>
   </div>
+  <div class="container">
+    <section class="categories">
+      <div class="category">
+        <div class="category__title"><a href="#">General</a></div>
+        <div class="category__description">A place for general discussion.</div>
+        <div class="category__stats">
+          <div class="category__stat">2 discussions</div>
+          <div class="category__stat">17 readers</div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category__title"><a href="#">Questions & Support</a></div>
+        <div class="category__description">New to TokenTalk? Get started here and feel free to ask questions!</div>
+        <div class="category__stats">
+          <div class="category__stat">12 discussions</div>
+          <div class="category__stat">17 readers</div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category__title"><a href="#">Random</a></div>
+        <div class="category__description">A place for general discussion.</div>
+        <div class="category__stats">
+          <div class="category__stat">2 discussions</div>
+          <div class="category__stat">17 readers</div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category__sponsor-badge">Sponsored</div>
+        <div class="category__title"><a href="#">Tokens 4 Charity</a></div>
+        <div class="category__description">A network for kind hearts to share and donate tokens.</div>
+        <div class="category__stats">
+          <div class="category__stat">2 discussions</div>
+          <div class="category__stat">17 readers</div>
+        </div>
+      </div>
+    </section>
+  </div>
+    <footer class="global-footer">
+      <div class="container">
+        <div class="footer__col three columns">
+          <div class="footer__heading">Navigation</div>
+          <ul class="footer__nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="footer__col three columns">
+          <div class="footer__heading">Stats</div>
+          <div>Total Users: 130</div>
+          <div>Total Posts: 143</div>
+          <div>Most Ever Online: 22</div>
+        </div>
+        <div class="footer__col three columns">
+          <div class="footer__heading">Users</div>
+          <div><a href="">adam</a>, <a href="">raider</a>, <a href="">maxsan</a>, <a href="">cryptonaut</a>, <a href="">devon</a></div>
+        </div>
+        <div class="footer__col three columns">
+          <div class="footer__heading">TokenTalk</div>
+          <div>
+            © <a href="www.tokenly.com" target="_blank">Tokenly</a> 2016</br>
+            All Rights Reserved</br>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

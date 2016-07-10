@@ -13,22 +13,77 @@ $brand-success:             #2eCC71
 $brand-warning:             #FFC107
 $brand-danger:              #FB6B5D
 
+$page-width: 960px
+$page-gutter: 10px
+
 $mobile-px: 400px
 $phablet-px: 550px
 $tablet-px: 750px
 $desktop-px: 1000px
 $desktophd-px: 1200px
 
+// Reset
+// http://meyerweb.com/eric/tools/css/reset/ 
+//    v2.0 | 20110126
+//    License: none (public domain)
+/* ----------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  vertical-align: baseline
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
 /* Typography
 /* ----------------------------------------------- */
 body
   font-size: 18px
+  font-family: $font-stack
+  color: $gray-darker
 
 *
   box-sizing: border-box
   -webkit-font-smoothing: antialiased
-  font-family: $font-stack
-  color: $gray-darker
+
+.material-icons
+  font-size: inherit
+  line-height: inherit
 
 h1, h2, h3, h4, h5, h6
   text-transform: uppercase
@@ -85,14 +140,14 @@ hr
   width: 100%
   margin: 0 auto
   &.with-padding
-    padding-left: 20px
-    padding-right: 20px
+    padding-left: $page-gutter
+    padding-right: $page-gutter
 .container
   position: relative
   width: 100%
-  max-width: 960px
+  max-width: $page-width
   margin: 0 auto
-  padding: 0 20px
+  padding: 0 $page-gutter
 .column,
 .columns
   width: 100%
@@ -200,6 +255,7 @@ hr
 /* ----------------------------------------------- */
 a
   color: $brand-primary
+  text-decoration: none
 a:hover
   color: lighten($brand-primary, 10%)
 

@@ -1,0 +1,38 @@
+.categories
+  margin-top: 30px
+
+.category
+  padding: 20px 0
+  &:not(:last-of-type)
+    border-bottom: 1px solid $gray-lighter
+
+.category__title
+  font-size: 24px
+  margin-bottom: 16px
+  a
+    text-decoration: none 
+
+.category__sponsor-badge
+  float: right
+  color: $gray
+  font-size: 14px
+  font-weight: bold
+  letter-spacing: 1px
+  text-transform: uppercase
+
+.category__description
+  font-size: 18px
+  margin-bottom: 16px
+
+.category__stats
+  font-size: 14px
+  color: $gray
+  display: flex
+
+.category__stat
+  &:not(:last-of-type)
+    margin-right: 20px
+    &:after
+      content: '/'
+      color: $gray-light
+      margin-left: 20px

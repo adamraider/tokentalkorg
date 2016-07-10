@@ -1,0 +1,86 @@
+$global-nav-height: 46px
+$global-nav-module-gutter: 35px
+.global-nav
+  background-color: $gray-darker
+  color: #FFFFFF
+  min-height: $global-nav-height
+
+.global-nav__logo
+  font-size: 18px
+  letter-spacing: 1px
+  margin-top: 13px
+  margin-right: $global-nav-module-gutter
+  float: left
+  a
+    color: #FFFFFF
+    text-decoration: none
+    &:hover, &:focus
+      text-decoration: none
+
+.global-nav__search
+  float: left
+  margin-right: $global-nav-module-gutter
+  margin-top: 8px
+  input
+    border: 1px solid #FFFFFF
+    background-color: transparent
+    color: #FFFFFF
+    float: left
+    font-size: 16px
+    padding: 4px 16px
+    width: 260px
+    &:focus
+      border: 1px solid #FFFFFF
+      outline: none
+      box-shadow: none  
+  .btn-search
+    border-top: 1px solid #FFFFFF
+    border-right: 1px solid #FFFFFF
+    border-bottom: 1px solid #FFFFFF
+    float: left
+    padding: 4px 8px 2px
+    transition: all 0.1s ease
+    &:hover, &:focus
+      background-color: #FFFFFF
+      cursor: pointer
+      color: $gray-darker
+
+.global-nav__menu
+  float: left
+  li
+    float: left
+    list-style-type: none
+    line-height: $global-nav-height
+    font-size: 16px
+    margin-bottom: 0
+    &:not(:last-of-type)
+      margin-right: 25px
+    a
+      display: block
+      color: #FFFFFF
+      text-decoration: none
+      &:hover, &:focus
+        color: $gray-light
+        text-decoration: none
+
+.global-nav__user
+  float: right
+  .user__icon
+    float: left
+    margin-right: 8px
+    margin-top: 10px
+    position: relative
+    i
+      font-size: 26px
+  .user__name
+    line-height: $global-nav-height
+  .user__notifications
+    background-color: $brand-primary
+    line-height: 1
+    padding: 2px
+    font-size: 12px
+    font-weight: bold
+    top: -2px
+    position: relative
+    display: inline-block
+    border-radius: 4px
