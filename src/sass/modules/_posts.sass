@@ -1,0 +1,71 @@
+.section__posts
+
+.posts__category
+  text-transform: uppercase
+  font-size: 16px
+  font-weight: bold
+  letter-spacing: 2px 
+  margin-bottom: 18px
+
+.post
+  padding: 12px 0
+  border-top: 1px solid $gray-lighter
+  &:last-of-type
+    border-bottom: 1px solid $gray-lighter
+  &::after
+    content: ''
+    clear: both
+    display: block
+
+.post__main
+  float: left
+  width: 80%
+
+.post__title
+  font-size: 18px
+  margin-bottom: 10px
+
+.post__details, .post__stats
+  font-size: 14px
+  color: $gray
+  float: left
+
+.post__details
+  margin-right: 40px
+
+.post__details__date
+
+.post__details__user
+
+.post__details__category
+
+
+.post__stats
+
+.post__stat
+  &:not(:last-of-type)
+    &::after
+      content: '/'
+      color: $gray-lighter
+      margin-left: 20px
+      margin-right: 20px 
+
+.post__stats__comments
+
+.post__stats__readers
+
+
+.post__users
+  float: right
+  margin-top: 9px
+  width: 20%
+
+$post__user-size: 24px
+.post__user
+  background-color: $gray
+  width: $post__user-size
+  height: $post__user-size
+  border-radius: $post__user-size
+  float: right
+  &:not(:first-of-type)
+    margin-right: 9px

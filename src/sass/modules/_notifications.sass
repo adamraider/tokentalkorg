@@ -1,0 +1,28 @@
+.notification
+  border-top: 1px solid $gray-lighter
+  &:last-of-type
+    border-bottom: 1px solid $gray-lighter
+  padding: 15px 10px
+  &:hover
+    background-color: $gray-lighter
+    cursor: pointer
+
+$notification__image-size: 48px
+.notification__image
+  width: $notification__image-size
+  height: $notification__image-size
+  border-radius: $notification__image-size
+  background-color: $gray
+  float: left
+  margin-right: 30px
+  img
+    width: 100%
+    border-radius: $notification__image-size
+
+.notification__details__text
+  margin-top: 2px
+  margin-bottom: 8px
+
+.notification__details__date
+  color: $gray
+  font-size: 14px
