@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     util = require('gulp-util'),
     sass = require('gulp-sass'),
+    concat = require('gulp-concat'),
     plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
@@ -22,11 +23,20 @@ gulp.task('styles', function() {
     .pipe(browserSync.reload({ stream:true }))
 });
 
+gulp.task('scripts', function() {
+  return gulp.src('./src/js/**/*.js')
+    .pipe(plumber({ errorHandler: errorHandler }))
+    .pipe(concat("application.js"))
+    .pipe(gulp.dest('./js'))
+    .pipe(browserSync.reload({ stream:true }))
+});
+
 gulp.task('serve', function() {
   browserSync.init({
     server: {
       baseDir: "./"
     }
   });
-  watch('./src/sass/**/*.sass', function(){ gulp.start('styles'); })
+  watch('./src/sass/**/*.sass', function(){ gulp.start('styles'); });
+  watch('./src/js/**/*.js', function(){ gulp.start('scripts'); });
 });

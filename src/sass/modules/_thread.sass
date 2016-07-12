@@ -1,0 +1,52 @@
+.thread
+  margin-bottom: 30px
+  &:after
+    content: ''
+    clear: both
+    display: block
+
+.thread__reply
+  padding: 15px
+  background-color: #F7F7F7
+
+.thread__user
+
+.thread__content
+
+$thread__user__avatar-size: 70px
+.thread__user__avatar
+  width: $thread__user__avatar-size
+  height: $thread__user__avatar-size
+  background-color: $gray
+  margin-bottom: 12px
+  img
+    width: 100%
+
+.thread__user__name
+  color: $gray-dark
+  font-size: 16px
+  margin-bottom: 8px
+
+.thread__content__title
+  font-size: 26px
+  color: $gray-dark
+  text-transform: initial
+  font-weight: normal
+  margin-bottom: 22px
+
+.thread__content__text
+  font-size: 16px
+  line-height: 1.5
+
+.thread__tip
+  +btn-link
+  letter-spacing: 1px
+  font-weight: bold
+  font-size: 14px
+
+.thread__content__date
+  float: right
+  text-align: right
+  color: $gray
+  font-size: 14px
+  margin-top: 10px

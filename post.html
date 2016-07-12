@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post // Tokenly Web Style Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/application.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js" type="text/javascript"></script>
+</head>
+<body id="app">
+
+  <!-- template for the modal component -->
+  <script type="x/template" id="modal-template">
+    <div class="modal-mask" v-show="show" transition="modal">
+      <div class="modal-wrapper">
+        <div class="modal-container">
+          <div class="modal-x" @click="show = false">
+            <i class="material-icons">close</i>
+          </div>
+
+          <div class="modal-header">
+            <slot name="header"></slot>
+          </div>
+          
+          <div class="modal-body">
+            <slot name="body"></slot>
+          </div>
+
+          <div class="u-cf"></div>
+        </div>
+      </div>
+      <div class="modal-bg" @click="show = false"></div>
+    </div>
+  </script>
+
+  <modal :show.sync="showModal">
+    <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+    <h3 slot="header">Give a Tip</h3>
+    <form slot="body" action="">
+      <div class="input-group">
+        <div class="row">
+          <label>Amount</label>
+        </div>
+        <div class="row">
+          <button class="btn__amount four columns">$0.50</button>
+          <button class="btn__amount four columns">$1</button>
+          <button class="btn__amount four columns">$2</button>
+        </div>
+        <div class="row">
+          <div class="three columns">
+            <select name="token">
+              <option value="mBTC" selected>mBTC</option>
+              <option value="TOKENLY">TOKENLY</option>
+              <option value="SYS">CREDIT</option>
+            </select>
+          </div>
+          <div class="nine columns">
+            <input type="text" placeholder="Custom amount...">
+          </div>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>Add a note</label>
+        <textarea type="text" placeholder="Thanks for helping me out!"></textarea>
+      </div>
+      <div class="input-group">
+        <button type="submit" class="btn fill primary">Submit</button>
+      </div>
+    </form>
+  </modal>
+
+  <div class="global-nav">
+    <div class="container">
+      <div class="global-nav__logo"><a href="/">Token<strong>Talk</strong>.org</a></div>
+      <div class="global-nav__search">
+        <input type="text" placeholder="search...">
+        <div class="btn-search">
+          <i class="material-icons">search</i>
+        </div>
+      </div>
+      <ul class="global-nav__menu">
+        <li><a href="/">home</a></li>
+        <li><a href="#">forum</a></li>
+        <li><a href="#">discover</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+      <div class="global-nav__user">
+        <div class="user__icon">
+          <i class="material-icons">account_circle</i>
+        </div>
+        <span class="user__name">Adam</span>
+        <span class="user__notifications">12</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <section class="section__breadcrumbs">
+      <span>
+        <a href="#">tokentalk</a>
+        <span class="text-light">></span>
+        <a href="#">general</a> 
+        <span class="text-light">></span>
+        post
+      </span>
+    </section>
+    <section>
+      <div class="thread">
+        <div class="row">
+          <div class="thread__user two columns">
+            <div class="thread__user__avatar">
+              <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+            </div>
+            <div class="thread__user__name">
+              Adam Raider
+            </div>
+            <button class="thread__tip" @click="showModal = true">TIP</button>
+          </div>
+          <div class="thread__content ten columns">
+            <h1 class="thread__content__title">
+              Urna ultricies organic urna rutrum nam ut noise-rock  
+            </h1>
+            <p class="thread__content__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in, vitae iste, sed harum dolor aliquam beatae! Tenetur dolorum perspiciatis voluptatem quisquam repellat labore, minima id quae sunt quia at.
+            </p>
+            <div class="row">
+              <div class="thread__content__date">
+                posted on May 2, 2015 at 10:20 AM
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thread thread__reply">
+        <div class="thread">
+          <div class="row">
+            <div class="thread__user two columns">
+              <div class="thread__user__avatar">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+              </div>
+              <div class="thread__user__name">
+                Adam Raider
+              </div>
+              <button class="thread__tip" @click="showModal = true">TIP</button>
+            </div>
+            <div class="thread__content ten columns">
+              <p class="thread__content__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in, vitae iste, sed harum dolor aliquam beatae! Tenetur dolorum perspiciatis voluptatem quisquam repellat labore, minima id quae sunt quia at.
+              </p>
+              <div class="row">
+                <div class="thread__content__date">
+                  posted on May 2, 2015 at 10:20 AM
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="thread_replies offset-by-two ten columns">
+              <div class="thread">
+                <div class="row">
+                  <div class="thread__user two columns">
+                    <div class="thread__user__avatar">
+                      <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                    </div>
+                    <div class="thread__user__name">
+                      Adam Raider
+                    </div>
+                    <button class="thread__tip" @click="showModal = true">TIP</button>
+                  </div>
+                  <div class="thread__content ten columns">
+                    <p class="thread__content__text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in, vitae iste, sed harum dolor aliquam beatae! Tenetur dolorum perspiciatis voluptatem quisquam repellat labore, minima id quae sunt quia at.
+                    </p>
+                    <div class="row">
+                      <div class="thread__content__date">
+                        posted on May 2, 2015 at 10:20 AM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thread">
+                <div class="row">
+                  <div class="thread__user two columns">
+                    <div class="thread__user__avatar">
+                      <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                    </div>
+                    <div class="thread__user__name">
+                      Adam Raider
+                    </div>
+                    <button class="thread__tip" @click="showModal = true">TIP</button>
+                  </div>
+                  <div class="thread__content ten columns">
+                    <p class="thread__content__text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in, vitae iste, sed harum dolor aliquam beatae! Tenetur dolorum perspiciatis voluptatem quisquam repellat labore, minima id quae sunt quia at.
+                    </p>
+                    <div class="row">
+                      <div class="thread__content__date">
+                        posted on May 2, 2015 at 10:20 AM
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thread thread__reply">
+        <div class="thread">
+          <div class="row">
+            <div class="thread__user two columns">
+              <div class="thread__user__avatar">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+              </div>
+              <div class="thread__user__name">
+                Adam Raider
+              </div>
+              <button class="thread__tip" @click="showModal = true">TIP</button>
+            </div>
+            <div class="thread__content ten columns">
+              <p class="thread__content__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in, vitae iste, sed harum dolor aliquam beatae! Tenetur dolorum perspiciatis voluptatem quisquam repellat labore, minima id quae sunt quia at.
+              </p>
+              <div class="row">
+                <div class="thread__content__date">
+                  posted on May 2, 2015 at 10:20 AM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="section__footer">
+    <div class="footer__content container">
+      <div class="footer__col three columns">
+        <div class="footer__heading">Navigation</div>
+        <ul class="footer__nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="footer__col three columns">
+        <div class="footer__heading">Stats</div>
+        <div>Total Users: 130</div>
+        <div>Total Posts: 143</div>
+        <div>Most Ever Online: 22</div>
+      </div>
+      <div class="footer__col three columns">
+        <div class="footer__heading">Users</div>
+        <div><a href="">adam</a>, <a href="">raider</a>, <a href="">maxsan</a>, <a href="">cryptonaut</a>, <a href="">devon</a></div>
+      </div>
+      <div class="footer__col three columns">
+        <div class="footer__heading">TokenTalk</div>
+        <div>
+          © <a href="http://www.tokenly.com" target="_blank">Tokenly</a> 2016</br>
+          All Rights Reserved</br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/application.js" type="text/javascript"></script>
+</body>
+</html>

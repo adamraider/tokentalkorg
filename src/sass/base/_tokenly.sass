@@ -135,6 +135,18 @@ hr
   margin-top: 30px
   margin-bottom: 50px
 
+.text-medium
+  font-weight: 500
+
+.text-muted
+  color: $gray
+
+.text-light
+  color: $gray-light
+
+.text-lighter
+  color: $gray-lighter
+
 
 /* Grid
 /* ----------------------------------------------- */
@@ -365,7 +377,20 @@ hr
   &:hover
     border-color: lighten($btn-color, 8%)
     color: lighten($btn-color, 8%)
-    
+  
+@mixin btn-link
+  outline: none
+  border: none
+  background: none
+  text-align: left
+  color: $brand-primary
+  display: inline
+  margin: 0
+  padding: 0
+  cursor: pointer
+  &:hover
+    color: lighten($brand-primary, 10%)
+
 .btn.fill
   &.default
     +btn($gray)
@@ -392,10 +417,10 @@ hr
 
 /* Forms and Input Fields
 /* ----------------------------------------------- */
-.input-group
+.input-group:not(:last-of-type)
   margin-bottom: 15px
 label
-  margin-bottom: 6px
+  margin-bottom: 10px
   min-width: 120px
   display: inline-block
   color: $gray-dark
