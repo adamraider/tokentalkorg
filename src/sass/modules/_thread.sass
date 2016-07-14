@@ -1,6 +1,7 @@
+$thread__spacing: 30px
 .thread
   &:not(:last-of-type)
-    margin-bottom: 30px
+    margin-bottom: $thread__spacing
   &:after
     content: ''
     clear: both
@@ -14,11 +15,11 @@
 .thread__content
 
 .thread__user__avatar
-  width: 100%
+  float: left
   max-width: 80px
   margin-bottom: 12px
   img
-    width: 100%
+    width: 40px
 
 .thread__user__name
   color: $gray-dark
@@ -36,6 +37,9 @@
   font-size: 16px
   line-height: 1.5
 
+.thread_replies
+  margin-top: $thread__spacing
+
 .thread__tip
   +btn-link
   letter-spacing: 1px
@@ -48,3 +52,22 @@
   color: $gray
   font-size: 14px
   margin-top: 10px
+
+.btn__amount
+  +btn($gray)
+  margin-bottom: 10px
+
+.select__tip-token
+  background-color: $gray-lighter
+  border-color: $gray-lighter
+
+.like__wrapper
+  float: left
+  text-align: center
+
+.like__up-button
+  font-size: 32px
+  line-height: 1
+
+.like__counter
+  color: $gray

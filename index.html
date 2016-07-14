@@ -11,7 +11,27 @@
 
 </head>
 <body>
-  <div class="global-nav">
+  <!-- Global-Nav Mobile -->
+  <div class="global-nav__mobile" id="global-nav__mobile">
+    <div class="global-nav__mobile__sidebar">
+      <div class="global-nav__mobile__heading">
+        <i class="material-icons global-nav__toggle">close</i>
+      </div>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="#">forum</a></li>
+        <li><a href="#">discover</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+      <hr>
+      <ul>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="global-nav__mobile__bg global-nav__toggle"></div>
+  </div> <!-- End Global-Nav Mobile -->
+
+  <div class="global-nav" id="global-nav">
     <div class="container">
       <div class="global-nav__logo"><a href="/">Token<strong>Talk</strong>.org</a></div>
       <div class="global-nav__search">
@@ -26,6 +46,11 @@
         <li><a href="#">discover</a></li>
         <li><a href="#">about</a></li>
       </ul>
+      <div class="global-nav__toggle-wrapper">
+        <i class="material-icons global-nav__toggle">
+          dehaze
+        </i>
+      </div>
       <div class="global-nav__user">
         <div class="user__icon">
           <i class="material-icons">account_circle</i>
@@ -122,5 +147,9 @@
       </div>
     </div>
   </section>
+  
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js" type="text/javascript"></script>
+  <script src="./js/application.js"></script>
 </body>
 </html>
