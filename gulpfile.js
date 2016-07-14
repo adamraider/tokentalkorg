@@ -19,6 +19,10 @@ gulp.task('styles', function() {
   return gulp.src('./src/sass/application.sass')
     .pipe(plumber({ errorHandler: errorHandler }))
     .pipe(sass({ indentedSyntax: true }).on('error', util.log))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({ stream:true }))
 });

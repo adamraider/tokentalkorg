@@ -1,23 +1,21 @@
 .thread
-  margin-bottom: 30px
+  &:not(:last-of-type)
+    margin-bottom: 30px
   &:after
     content: ''
     clear: both
-    display: block
 
 .thread__reply
-  padding: 15px
+  padding: 20px
   background-color: #F7F7F7
 
 .thread__user
 
 .thread__content
 
-$thread__user__avatar-size: 70px
 .thread__user__avatar
-  width: $thread__user__avatar-size
-  height: $thread__user__avatar-size
-  background-color: $gray
+  width: 100%
+  max-width: 80px
   margin-bottom: 12px
   img
     width: 100%

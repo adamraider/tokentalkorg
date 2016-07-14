@@ -53,12 +53,15 @@
           <button class="btn__amount four columns">$2</button>
         </div>
         <div class="row">
-          <div class="three columns">
-            <select name="token">
+          <div class="three columns u-position-relative">
+            <select class="select__tip-token" name="token">
               <option value="mBTC" selected>mBTC</option>
               <option value="TOKENLY">TOKENLY</option>
               <option value="SYS">CREDIT</option>
             </select>
+            <div class="select-button">
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
           </div>
           <div class="nine columns">
             <input type="text" placeholder="Custom amount...">
@@ -113,8 +116,16 @@
       <div class="thread">
         <div class="row">
           <div class="thread__user two columns">
-            <div class="thread__user__avatar">
-              <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+            <div class="row">
+              <div class="eight columns">
+                <div class="thread__user__avatar">
+                  <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                </div>
+              </div>
+              <div class="like__wrapper four columns">
+                <button class="btn-link like__up-button"><i class="material-icons">keyboard_arrow_up</i></button>
+                <div class="like__counter">12</div>
+              </div>
             </div>
             <div class="thread__user__name">
               Adam Raider
@@ -140,11 +151,16 @@
         <div class="thread">
           <div class="row">
             <div class="thread__user two columns">
-              <div class="thread__user__avatar">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
-              </div>
-              <div class="thread__user__name">
-                Adam Raider
+              <div class="row">
+                <div class="eight columns">
+                  <div class="thread__user__avatar">
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                  </div>
+                </div>
+                <div class="like__wrapper four columns">
+                  <button class="btn-link like__up-button"><i class="material-icons">keyboard_arrow_up</i></button>
+                  <div class="like__counter">12</div>
+                </div>
               </div>
               <button class="thread__tip" @click="showModal = true">TIP</button>
             </div>
@@ -164,11 +180,16 @@
               <div class="thread">
                 <div class="row">
                   <div class="thread__user two columns">
-                    <div class="thread__user__avatar">
-                      <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
-                    </div>
-                    <div class="thread__user__name">
-                      Adam Raider
+                    <div class="row">
+                      <div class="eight columns">
+                        <div class="thread__user__avatar">
+                          <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                        </div>
+                      </div>
+                      <div class="like__wrapper four columns">
+                        <button class="btn-link like__up-button"><i class="material-icons">keyboard_arrow_up</i></button>
+                        <div class="like__counter">12</div>
+                      </div>
                     </div>
                     <button class="thread__tip" @click="showModal = true">TIP</button>
                   </div>
@@ -187,11 +208,16 @@
               <div class="thread">
                 <div class="row">
                   <div class="thread__user two columns">
-                    <div class="thread__user__avatar">
-                      <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
-                    </div>
-                    <div class="thread__user__name">
-                      Adam Raider
+                    <div class="row">
+                      <div class="eight columns">
+                        <div class="thread__user__avatar">
+                          <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                        </div>
+                      </div>
+                      <div class="like__wrapper four columns">
+                        <button class="btn-link like__up-button"><i class="material-icons">keyboard_arrow_up</i></button>
+                        <div class="like__counter">12</div>
+                      </div>
                     </div>
                     <button class="thread__tip" @click="showModal = true">TIP</button>
                   </div>
@@ -215,11 +241,16 @@
         <div class="thread">
           <div class="row">
             <div class="thread__user two columns">
-              <div class="thread__user__avatar">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
-              </div>
-              <div class="thread__user__name">
-                Adam Raider
+              <div class="row">
+                <div class="eight columns">
+                  <div class="thread__user__avatar">
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=45%C3%9745&w=45&h=45" alt="">
+                  </div>
+                </div>
+                <div class="like__wrapper four columns">
+                  <button class="btn-link like__up-button"><i class="material-icons">keyboard_arrow_up</i></button>
+                  <div class="like__counter">12</div>
+                </div>
               </div>
               <button class="thread__tip" @click="showModal = true">TIP</button>
             </div>

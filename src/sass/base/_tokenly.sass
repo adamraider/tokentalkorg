@@ -319,6 +319,8 @@ pre > code
   float: right
 .u-pull-left
   float: left
+.u-position-relative
+  position: relative
 .overflow-hidden
   overflow: hidden
 
@@ -391,6 +393,9 @@ hr
   &:hover
     color: lighten($brand-primary, 10%)
 
+.btn-link
+  +btn-link
+
 .btn.fill
   &.default
     +btn($gray)
@@ -417,8 +422,10 @@ hr
 
 /* Forms and Input Fields
 /* ----------------------------------------------- */
-.input-group:not(:last-of-type)
-  margin-bottom: 15px
+.input-group
+  position: relative
+  &:not(:last-of-type)
+    margin-bottom: 15px
 label
   margin-bottom: 10px
   min-width: 120px
@@ -445,6 +452,8 @@ input[type="week"],
 textarea, 
 select
   -webkit-appearance: initial
+  -moz-appearance: none
+  appearance: none
   display: inline-block
   width: 100%
   border: none
@@ -461,6 +470,16 @@ select
   font-size: 13px
   color: $gray
   margin-top: 5px
+.select-button
+  position: absolute
+  top: 8px
+  right: 5px
+  font-size: 24px
+  color: $gray
+  content: ""
+  pointer-events: none
+  -webkit-appearance: none
+  -moz-appearance: none
 
 /* Tables
 /* ----------------------------------------------- */
